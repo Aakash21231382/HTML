@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cfd3f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 800px;
+      margin: 40px auto;
+      background: #ffe1e1;
+      padding: 25px 40px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #222;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    input[type="file"],
+    select,
+    textarea {
+      padding: 8px;
+      width: 60%;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      
+    }
+    
+    .inline-inputs input {
+      width: calc(30% - 10px);
+      margin-right: 5px;
+    }
+    .gender input,
+    .dept input {
+      width: auto;
+      margin-left: 5px;
+    }
+    .gender label,
+    .dept label {
+      width: auto;
+      font-weight: normal;
+      margin-right: 20px;
+    }
+    textarea {
+      height: 70px;
+      resize: none;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      background-color: #ff6666;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #e05555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form </h2>
+    <form>
+      <div class="form-group">
+        <label>Roll no. :</label>
+        <input type="text" name="rollno" required>
+      </div>
+      <div class="form-group">
+        <label>Student name :</label>
+        <input type="text" name="fname" placeholder="First Name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <label>Father's name :</label>
+        <input type="text" name="fathername" required>
+      </div>
+      <div class="form-group">
+        <label>Date of birth :</label>
+        <input type="date" placeholder="Day" min="1" max="31">
+        
+      </div>
+      <div class="form-group">
+        <label>Mobile no. :</label>
+        <input type="text" value="+91" readonly style="width:50px;">
+        <input type="number" name="mobile" placeholder="Enter number" required>
+      </div>
+      <div class="form-group">
+        <label>Email id :</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Password :</label>
+        <input type="password" name="password" required>
+      </div>
+      <div class="form-group gender">
+        <label>Gender :</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+      <div class="form-group dept">
+        <label>Department :</label>
+        <input type="checkbox" name="dept" value="CSE"> CSE
+        <input type="checkbox" name="dept" value="IT"> IT
+        <input type="checkbox" name="dept" value="ECE"> ECE
+        <input type="checkbox" name="dept" value="Civil"> Civil
+        <input type="checkbox" name="dept" value="Mech"> Mech
+      </div>
+      <div class="form-group">
+        <label>Course :</label>
+        <select name="course">
+          <option>---------------- Select Current Course ----------------</option>
+          <option>BCA</option>
+          <option>B.Tech</option>
+          <option>MCA</option>
+          <option>M.Tech</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Student photo :</label>
+        <input type="file" name="photo">
+      </div>
+      <div class="form-group">
+        <label>City :</label>
+        <input type="text" name="city">
+      </div>
+      <div class="form-group">
+        <label>Address :</label>
+        <textarea name="address"></textarea>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+</body>
+</html>
