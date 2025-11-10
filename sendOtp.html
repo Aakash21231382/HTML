@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f3f3f3; }
+        .container { max-width: 300px; padding: 20px; background-color: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        input[type="text"], input[type="submit"] { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+        input[type="submit"] { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>OTP Verification</h2>
+    <form id="otpForm" onsubmit="sendOtp(event)">
+        <label for="phoneNumber">Enter Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+        <input type="submit" value="Send OTP">
+    </form>
+    <p id="message"></p>
+</div>
+
+<script>
+    function sendOtp(event) {
+        event.preventDefault();
+        const phoneNumber = document.getElementById("phoneNumber").value;
+
+        // Simulate OTP sending (you would replace this with your backend API)
+        fetch('/send-otp', { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phoneNumber: phoneNumber })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("message").textContent = "OTP sent successfully!";
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("message").textContent = "Failed to send OTP.";
+        });
+    }
+</script>
+
+</body>
+</html>
