@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        :root{
+            --primary-text-color:#121111;
+            --secondary-text-color:#444;
+            --card-background-color:#fff;
+            --parent-background-color:#eee;
+            --spacing-for-margin-padding:20px
+        }
+        .dark{
+             --primary-text-color:#fff;
+            --secondary-text-color:#ddd;
+            --card-background-color:#333;
+            --parent-background-color:#eee;
+        }
+        .container{
+            padding: 45px;
+            /*--backg-color:red*/
+            background-color: var(--parent-background-color);
+            min-height: 100vh;
+
+        }
+        h1{
+            text-align: center;
+            color:var(--primary-text-color);
+            background-color: var(--card-background-color);
+            padding: 20px;
+            margin: 20px;
+        
+        }
+        h2{
+            --backg-color:yellow;
+           /* background-color:var(--backg-color);*/
+           color:var(--primary-text-color);
+        }
+        .box{
+            padding: 20px;
+            margin-block: 20px;
+            /*--backg-color:red;*/
+            background-color: var( --card-background-color);
+            border-radius: 5%;
+            
+        }
+        .box p{
+            color:var(--secondary-text-color);
+            
+        }
+        h4{
+            padding: 45px;
+            /*background-color:var(--backg-color,pink);
+            margin-left: 70px;
+            margin-right: 70px;*/
+            color:var(--primary-text-color);
+        }
+        /*@media(min-width:600px){
+            .container{
+                --backg-color:green;
+            }
+        }*/
+
+    </style>
+</head>
+<body class="dark">
+    <div class="container ">
+    <h1>Hello Trekker's!!</h1>
+    <div class="box">
+    <h2>Mountains</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minus tenetur itaque tempora eaque, ullam rerum, nisi minima cumque laboriosam a provident nulla odit reprehenderit architecto, aliquam sint distinctio tempore.</p>
+    </div>
+
+    <div class="box">
+        <h2>Beaches</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi nesciunt amet nulla ipsa molestiae, natus inventore provident laudantium veritatis dolore, harum quasi numquam? Fugit necessitatibus pariatur beatae rerum repudiandae.</p>
+    </div>
+    <div class="box">
+    <h2>Waterfalls</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates officia suscipit soluta? Sed, nam consectetur architecto nemo nesciunt alias quod error enim animi iure ipsa voluptates, qui sapiente. Molestias, porro?</p>
+    
+</div>
+
+</div>
+<script>
+    document.body.classList.add('dark');
+</script>
+</body>
+</html>
