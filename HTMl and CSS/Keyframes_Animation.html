@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 200px;
+        }
+        .container{
+            width: 280px;
+            height: 280px;
+            border: 3px solid rgb(13, 12, 12);
+            animation: orbit 4s linear infinite ;
+            border-radius: 50%;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            border-radius: 50%;
+           /* transition: 1s ease-in;*/
+            cursor: pointer;
+           /*animation-name: shiftTheBox;*/
+          /* animation-name: slide-in;*/
+           animation-duration: 2s;
+           animation-name: orbit;
+          /* animation-delay: 2s;
+            animation-iteration-count: infinite;
+           animation-direction: alternate-reverse;*/
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+        }
+        /*.box:hover{
+            transform: translate(200px);
+        }*/
+
+        @keyframes orbit{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slide-in{
+            0%{
+                transform: translate(-200px);
+            }
+            100%{
+                transform: translate(200px);
+            }
+        }
+
+
+        @keyframes shiftTheBox{
+            0%{
+                transform: translate(0,0);
+               /* border-radius: 50%;*/
+            }
+            25%{
+                 transform: translate(200px,0);
+                 /*background-color: deeppink;*/
+
+            }
+            50%{
+                 transform: translate(200px,200px);
+            }
+            75%{
+                 transform: translate(0,200px);
+            }
+            /*100%{
+                transform: translate(0,0);
+            }*/
+            }
+
+            .loader{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+            .dot{
+                width: 10px;
+                height: 10px;
+                background-color: black;
+                border-radius: 50%;
+                animation:loading 1s ease-in infinite alternate;
+            }
+            .dot:nth-child(2){
+                animation-delay: 0.1s;
+            }
+
+             .dot:nth-child(4){
+                animation-delay: 0.1s;
+            }
+
+            @keyframes loading{
+                from{
+                    transform: translateY(-100px);
+                }
+                to{
+                    transform: translateY(10px);
+                }
+            }
+           
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h3></h3>
+    <div class="box">
+
+    </div>
+   </div> 
+   <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+   </div>
+</body>
+</html>
