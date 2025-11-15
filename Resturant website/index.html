@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="conatainer">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>Bella Vista</h1>
+                    <span class="tagline">Resturant Authentic Italian Cuisine</span>
+                    </span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact"> Contact Us</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+
+    <main>
+       <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Bella Vista</h2>
+                <p>Experience the Authentic taste of Italy in the heart of the city.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">View Menu</a>
+                    <a href="#contact" class="btn btn-secondary"> Make Reservation</a>
+                </div>
+            </div>
+        </section> 
+<!-- menu section  -->
+        
+        <section id="menu" class="menu">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+
+                <p class="section-subtitle">Discovery ur carefully crafted dishes.</p>
+                <div class="menu-category">
+                    <h3>Appetizers</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Bruschetta Italiana</h4>
+                                <p>Fresh Tomatoes , and mozarella on toasted bread.</p>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Antipasto Platter</h4>
+                                <p>Selection of cured meats , cheeses and mari</p>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+
+                         <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Noodles</h4>
+                                <p>Selection of cured meats , cheeses and mari</p>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+
+                         <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Burger</h4>
+                                <p>Selection of cured meats , cheeses and mari</p>
+                            </div>
+                            <span class="price">$20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- about section to maniuplate define as the completeness in two part define  -->
+        <section id="about" class="about">
+            <div class="conatiner">
+                <h2 class="section-title">About Bella Vista</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2025  by the Aakash family. bella Vista has been serving authentic italian cuisine for over three decades .Our passionn for traditional recipes and fresh ingrdients has been made us a beloved destination for food lovers.</p>
+                        <p>Every dish is prepared with love and attention to detail , using recipes passed down through generation of Indian Cehfs.</p>
+
+                    </div>
+                     <div class="about-image">
+                    <img src="https://www.bijourestaurant.com/wp-content/uploads/2025/05/home_ppl.jpg" alt="Resturant Images">
+                </div>
+                </div>
+               
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+
+
+                        <div class="contact-item">
+                            <strong>Adderss:</strong>
+                            <p>123 Indian street , delhi  NY 1001</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <p>(555)123-32332</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <p>info@bellavista.com</p>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-form">
+                        <h3>Make a Reservation</h3>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="number" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date">Reservation Date:</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="time">Time:</label>
+                                <select type="time" id="time" name="time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="18:00"> 6:00</option>
+                                    <option value="19:00"> 7:00</option>
+                                    <option value="20:00"> 8:00</option>
+                                    <option value="21:00"> 9:00</option>
+                                   </select> 
+                            </div>
+                           <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select name="guests" id="guests" name="guests" required>
+                                <option value="Select Guests"></option>
+                                <option value="1">1 Guests</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                           </div>
+
+                           <div class="form-group">
+                                <label for="message">Special Requests:</label>
+                               <textarea name="message" id="message" name="message" rows="4" placeholder="Any special dietary requiremants or requests..."></textarea>
+                            </div>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bella Vista</h3>
+                    <p>Authentic Italian cuisine in the heart of the city. Experience the taste of italy with every bite.</p>
+
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <p >Monday - Thrusday: 11:00 AM - 10:00 PM</p>
+                    <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
+                    <p>Sunday: 12:00 PM - 9:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="" class="social-links">Facebook</a>
+                        <a href="" class="social-links">Instagram</a>
+                        <a href="" class="social-links">Twitter</a>
+                    </div>
+
+                    
+                </div>
+                <div class="footer-bottom">
+                        <p>&copy; 2024 Bella Vista Resturant . All rights reserved.</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
